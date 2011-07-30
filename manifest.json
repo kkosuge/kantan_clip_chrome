@@ -1,0 +1,10 @@
+{
+  "name":"ClipLink",
+  "version":"1.0",
+  "description":"かんたんクリップのchrome拡張版",
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "browser_action":{
+    "default_icon":"icon.png"
+  }
+}

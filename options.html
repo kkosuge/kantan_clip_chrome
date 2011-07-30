@@ -1,0 +1,16 @@
+<!-- これいらないっぽい…… -->
+<html>
+<script>
+function save(){
+  var user_id = document.getElementById("user_id").value;
+  localStorage["cliplink_uid"] = user_id;
+  var status = document.getElementById("status");
+  status.innerHTML = "Saved!";
+}
+</script>
+<a href="http://cliplink.jp/config">http://cliplink.jp/config</a> ここのかんたんクリップからuser_idもってきてください<br /><br />
+user_id: 
+<input type="text" id="user_id">
+<button onclick="save()">Save</button>
+<div id="status" style="color:blue;"></div>
+</html>

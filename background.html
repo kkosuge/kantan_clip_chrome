@@ -1,0 +1,16 @@
+<html>
+<script>
+function jump(tab){
+    if (localStorage["cliplink_uid"]){
+        var jump_url = 'http://cliplink.jp/posting/create?mode=bookmarklet&user_id='+encodeURIComponent(localStorage["cliplink_uid"])+'&title='+encodeURIComponent(tab.title)+'&url='+encodeURIComponent(tab.url);
+        chrome.tabs.update(tab.id,{url:jump_url});
+    }else{
+        localStorage["cliplink_uid"] = "sorry";
+        jump();
+    }
+}
+chrome.browserAction.onClicked.addListener(function(tab) {
+    jump(tab);
+});
+</script>
+</html>
